@@ -148,5 +148,4 @@ char* RLEListExportToString(RLEList list, RLEListResult* result);
 */
 RLEListResult RLEListMap(RLEList list, MapFunction map_function);
 
-
 #endif // HW1_RLELIST_H
