@@ -1,6 +1,9 @@
 /**
  * TO DELETE before submission
  */
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
 
 
 //
@@ -8,14 +11,15 @@
 //
 
 char* stringDuplicator(char* s, int times){
-	assert(!s);
+	assert(s);
 	assert(times > 0);
-	int LEN = strlen(s);
-	char* out = malloc(LEN*times);
+	const int length = strlen(s);
+	char* out =(char *) malloc(length*times*sizeof(char ));
+	char* start = out;
 	assert(out);
-	for (int i=0; i<=times; i++){
-		out = out + LEN;
+	for (int i=0; i<times; i++) {
+		out = out + length;
 		strcpy(out,s);
 	}
-	return out;
+	return start;
 }
